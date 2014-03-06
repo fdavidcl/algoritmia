@@ -7,6 +7,6 @@ permalink: /archive/
 <article>
 	<h2>Archivo</h2>
 	{% for post in site.posts %}
-		<a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+		<a href="{{ site.baseurl }}{{ post.url }}"><h3>{{ post.title }}</h3></a>
 	{% endfor %}
 </article>
