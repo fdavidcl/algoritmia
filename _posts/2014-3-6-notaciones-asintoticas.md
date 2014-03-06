@@ -19,8 +19,8 @@ tales que `$f(n)\geq c\times g(n) \forall n\geq k$`.
 `$f(n)\in O(g(n)) \Leftrightarrow g(n)\in \Omega(f(n))$`
 
 ### Notación `$\Theta$`
-Se dice que `$f(n)$` es `$\Omega(g(n))$` si existen `$k\in\mathbb{N},\ c\in\mathbb{R}$`
-tales que `$f(n)\geq c\times g(n) \forall n\geq k$`.
+Se dice que `$f(n)$` es `$\Omega(g(n))$` si existen `$k\in\mathbb{N},\ c_1, c_2\in\mathbb{R}$`
+tales que `c_1\times g(n) \leq $f(n)\leq c_2\times g(n) \forall n\geq k$`.
 
 #### Proposición
 `$f(n)\in \Theta(g(n)) \Leftrightarrow f(n)\in O(g(n))\ y\ f(n)\in \Omega(g(n))$`
