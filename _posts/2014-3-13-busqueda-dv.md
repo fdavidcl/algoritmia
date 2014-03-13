@@ -18,12 +18,12 @@ EL algoritmo *merge sort* aplica Divide y Vencerás particionando de forma equil
 
     def mergesort t
         if t.length < m
-            return insertsort t
+            insertsort t
         else
-            o = [
+            [
                 mergesort t[0..(t.length/2)],
                 mergesort t[(1+t.length/2)..(t.length-1)]
-                ].flatten
+            ].flatten
         end
     end
 
@@ -31,6 +31,19 @@ donde m es el valor tal que cuando el tamaño del array es menor que m, la inser
 
 #### Quick sort
 
+*Quicksort* o algoritmo de Hoare elige un pivote de forma que los elementos mayores que él se posicionarán a su derecha, y los menores se ubicarán a la izquierda. Después se aplica *quicksort* sobre las dos partes del array (sin el pivote).
 
+**Elección del pivote**: Se suele emplear la mediana de tres elementos del array, o bien se busca el elemento medio del mismo. Es conveniente elegir el pivote de forma que la partición del array resultante sea lo más equilibrada posible, lo que ocasionará un mejor tiempo de ejecución.
 
+El procedimiento que reparte los elementos del array según el pivote toma dos índices y va intercambiando los elementos menores que el pivote con los sucesivos elementos mayores que haya a su izquierda:
 
+    procedure pivot (T [i .. j ] ; var 1)
+        p <- T[i]
+        k <- i; l <- j + 1
+        repeat k <- k + 1 until T[k] > p or k >= j
+        repeat I <- l - 1 until T[l] <= p
+        while k < I do
+            swap T[k] and T[l]
+            repeat k <- k + 1 until T[k] > p
+            repeat l <- l - 1 until T[l] <= p
+        swap T[i] and T[l]
