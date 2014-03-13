@@ -16,30 +16,30 @@ Consiste en tomar una lista ordenada y dividirla por la mitad, tomando cada vez 
 #### Ordenación por mezcla
 EL algoritmo *merge sort* aplica Divide y Vencerás particionando de forma equilibrada la lista dada en dos partes y ordenándolas recursivamente mediante el mismo algoritmo, finalmente recomponiendo la lista para obtenerla ordenada. Implementación en Ruby:
 
-    def merge(p, q)
-        r = []
+<pre><code class="ruby">def merge(p, q)
+    r = []
 
-        while p.any? or q.any?
-            if q.empty? or (p.any? and p.first <= q.first)
-                r.push(p.shift)
-            else
-                r.push(q.shift)
-            end
-        end
-
-        r
-    end
-
-    def mergesort(t)
-        if t.length < 2
-            t
+    while p.any? or q.any?
+        if q.empty? or (p.any? and p.first <= q.first)
+            r.push(p.shift)
         else
-            p = mergesort t[0 .. t.length/2 - 1]
-            q = mergesort t[t.length/2 .. t.length - 1]
-
-            merge p, q
+            r.push(q.shift)
         end
     end
+
+    r
+end
+
+def mergesort(t)
+    if t.length < 2
+        t
+    else
+        p = mergesort t[0 .. t.length/2 - 1]
+        q = mergesort t[t.length/2 .. t.length - 1]
+
+        merge p, q
+    end
+end</code></pre>
 
 donde m es el valor tal que cuando el tamaño del array es menor que m, la inserción es más rápida.
 
