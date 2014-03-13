@@ -16,10 +16,10 @@ Si tenemos un problema con un algoritmo cuadrático y dividimos el problema en 3
 
 ### Determinación del umbral
 Las recurrencias que se obtienen con Divide y Vencerás con del tipo:
-`$$T(n) = t(n)\ si n < n_0;\ 3t_c(n/2)+t(n)\ en otro caso$$`
+`$$T(n) = t(n)\ si n < n_0;\ 3t_c(n/2)+t(n)\ en\ otro\ caso$$`
 
 El umbral, `$n_0$`, se determina en función del problema original. Hay dos casos extremos que se pueden dar:
-* Si `$n_0 = +\infinity$` no se aplicará la técnica nunca, sino que se resolverá el problema mediante el algoritmo básico siempre.
+* Si `$n_0 = +\infty$` no se aplicará la técnica nunca, sino que se resolverá el problema mediante el algoritmo básico siempre.
 * Si `$n_0 = 1$`, se aplicará el algoritmo básico únicamente para el caso del problema más pequeño y en general se utilizará la forma recursiva.
 
 #### Método experimental
