@@ -14,13 +14,13 @@ permalink: /
 <nav>
 	{% if paginator.previous_page %}
 		{% if paginator.previous_page == 1 %}
-			<a href="/">&larr; Más nuevo</a>
+			<a href="{{ site.baseurl }}">&larr; Más nuevo</a>
 		{% else %}
-			<a href="/p/{{paginator.previous_page}}">&larr; Más nuevo</a>
+			<a href="{{ site.baseurl }}p/{{paginator.previous_page}}">&larr; Más nuevo</a>
 		{% endif %}
 	{% endif %}
 	<span class="page_number">{{paginator.page}} de {{paginator.total_pages}}</span>
 	{% if paginator.next_page %}
-		<a href="/p/{{paginator.next_page}}" class="next ">Más antiguo &rarr;</a>
+		<a href="{{ site.baseurl }}p/{{paginator.next_page}}" class="next ">Más antiguo &rarr;</a>
 	{% endif %}
 </nav>
