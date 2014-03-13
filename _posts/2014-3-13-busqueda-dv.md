@@ -19,11 +19,11 @@ EL algoritmo *merge sort* aplica Divide y Vencerás particionando de forma equil
 <pre><code class="ruby">def merge(p, q)
     r = []
 
-    while p.any? or q.any?
+    until p.empty? and q.empty?
         if q.empty? or (p.any? and p.first <= q.first)
-            r.push(p.shift)
+            r << p.shift
         else
-            r.push(q.shift)
+            r << q.shift
         end
     end
 
