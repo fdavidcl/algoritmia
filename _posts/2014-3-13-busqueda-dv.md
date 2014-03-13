@@ -23,7 +23,7 @@ EL algoritmo *merge sort* aplica Divide y Vencerás particionando de forma equil
             [
                 mergesort t[0..(t.length/2)],
                 mergesort t[(1+t.length/2)..(t.length-1)]
-            ].flatten
+            ].sort # lol
         end
     end
 
@@ -49,5 +49,6 @@ El procedimiento que reparte los elementos del array según el pivote toma dos �
             l = l - 1 until t[l] <= p
         end
         t[i], t[l] = t[l], t[i]
+    end
 
-El algoritmo *quicksort* se puede volver muy ineficiente si los arrays sobre los que se llama a 
+El algoritmo *quicksort* se puede volver muy ineficiente si los arrays sobre los que se llama recursivamente están muy desbalanceados.
