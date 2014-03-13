@@ -37,13 +37,17 @@ donde m es el valor tal que cuando el tamaño del array es menor que m, la inser
 
 El procedimiento que reparte los elementos del array según el pivote toma dos índices y va intercambiando los elementos menores que el pivote con los sucesivos elementos mayores que haya a su izquierda:
 
-    procedure pivot (T [i .. j ] ; var 1)
-        p <- T[i]
-        k <- i; l <- j + 1
-        repeat k <- k + 1 until T[k] > p or k >= j
-        repeat I <- l - 1 until T[l] <= p
-        while k < I do
-            swap T[k] and T[l]
-            repeat k <- k + 1 until T[k] > p
-            repeat l <- l - 1 until T[l] <= p
-        swap T[i] and T[l]
+    def pivot (t, l)
+        p = t[i]
+        k = i
+        l = j + 1
+        k = k + 1 until t[k] > p or k >= j
+        I = l - 1 until t[l] <= p
+        while k < I
+            t[k], t[l] = t[l], t[k]
+            k = k + 1 until t[k] > p
+            l = l - 1 until t[l] <= p
+        end
+        t[i], t[l] = t[l], t[i]
+
+El algoritmo *quicksort* se puede volver muy ineficiente si los arrays sobre los que se llama a 
