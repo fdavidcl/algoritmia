@@ -40,7 +40,11 @@ Suponemos $n=2m$. Tratamos $x$ e $y$ como dos strings de $n$ bits y los partimos
 $$x\times y=(a\times 2^{n/2}+b)(c\times 2^{n/2}+d)=ac2^n+(ad+bc)2^{n/2}+bd$$
 Así, reducimos el cálculo de $xy$ a la multiplicación de números de $n/2$ bits u algunas sumas y desplazamientos, pero no mejoramos la eficiencia. Si expresamos en su lugar:
 $$x\times y=ac2^n + ((a-b)(d-c)+ac+bc)2^{n/2} + bd$$
-Entonces se repiten multiplicaciones que solo es necesario hacer una vez y este algoritmo sí resulta ser más eficiente, dando la recurrencia $3T(\frac{n}{2})+kn \in O(n^{log 3})$.
+Entonces se repiten multiplicaciones que solo es necesario hacer una vez y este algoritmo sí resulta ser más eficiente, dando la recurrencia $3T(\frac{n}{2})+kn \in O(n^{log(3)})$.
 
 #### Multiplicación de matrices cuadradas: Método de Strassen
-La definición del algoritmo de multiplicación de matrices es `$C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}$`. Si el tamaño de las matrices es $2n\times 2n$, podemos reducir el caso a 7 multiplicaciones de matrices de tamaño $n$ y algunas sumas y restas. La recurrencia resultante 
+La definición del algoritmo de multiplicación de matrices es `$C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}$`. Si el tamaño de las matrices es $2n\times 2n$, podemos reducir el caso a 7 multiplicaciones de matrices de tamaño $n$ y algunas sumas y restas. La recurrencia resultante es $T(n)=7T(\frac{n}{2})+bn^2 \in \mathcal{O}(n^{log(7)}$.
+
+#### [Multiplicación de polinomios](http://www.cse.ust.hk/~dekai/271/notes/L03/L03.pdf)
+
+#### El problema del skyline
