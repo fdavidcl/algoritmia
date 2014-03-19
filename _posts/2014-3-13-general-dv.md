@@ -34,9 +34,13 @@ El umbral, `$n_0$`, se determina en función del problema original. Hay dos caso
 Se igualan las ecuaciones que nos dan el tiempo de ejecución de ambos algoritmos, para comprobar para qué valor de `$n$` se cruzan.
 
 ### Aplicaciones
+
 #### Multiplicación de enteros grandes
 Suponemos $n=2m$. Tratamos $x$ e $y$ como dos strings de $n$ bits y los partimos en dos mitades como $x=a\times b$, $y=c\times d$, de forma de las concatenaciones de $a$ y $b$, y $c$ y $d$ recuperan $a$ y $b$ respectivamente. Al ser números binarios los expresamos como
 $$x\times y=(a\times 2^{n/2}+b)(c\times 2^{n/2}+d)=ac2^n+(ad+bc)2^{n/2}+bd$$
 Así, reducimos el cálculo de $xy$ a la multiplicación de números de $n/2$ bits u algunas sumas y desplazamientos, pero no mejoramos la eficiencia. Si expresamos en su lugar:
 $$x\times y=ac2^n + ((a-b)(d-c)+ac+bc)2^{n/2} + bd$$
 Entonces se repiten multiplicaciones que solo es necesario hacer una vez y este algoritmo sí resulta ser más eficiente, dando la recurrencia $3T(\frac{n}{2})+kn \in O(n^{log 3})$.
+
+#### Multiplicación de matrices cuadradas: Método de Strassen
+La definición del algoritmo de multiplicación de matrices es `$C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}$`. Si el tamaño de las matrices es $2n\times 2n$, podemos reducir el caso a 7 multiplicaciones de matrices de tamaño $n$ y algunas sumas y restas. La recurrencia resultante 
