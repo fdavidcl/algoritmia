@@ -66,3 +66,5 @@ El procedimiento que reparte los elementos del array según el pivote toma dos �
     end
 
 El algoritmo *quicksort* se puede volver muy ineficiente si los arrays sobre los que se llama recursivamente están muy desbalanceados.
+
+**Eficiencia**: El tiempo del algoritmo es `$T(n)=T(1)+T(n-1)+a\times n$` (suponiendo el algoritmo de pivotado lineal), lo que nos da un orden cuadrático: `$\mathcal{O}(n^2)$`. Sin embargo, en media el algoritmo es mejor que los de inserción y selección.
