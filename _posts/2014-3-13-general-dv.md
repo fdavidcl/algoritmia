@@ -42,6 +42,8 @@ Así, reducimos el cálculo de $xy$ a la multiplicación de números de $n/2$ bi
 $$x\times y=ac2^n + ((a-b)(d-c)+ac+bc)2^{n/2} + bd$$
 Entonces se repiten multiplicaciones que solo es necesario hacer una vez y este algoritmo sí resulta ser más eficiente, dando la recurrencia $3T(\frac{n}{2})+kn \in O(n^{log(3)})$.
 
+**Ejemplo**: `$$5678\times 4321=(56\times 10^2+78)(43\times 10^2+21)=$$ $$=56\times 43\times 10^4 + (56\times 21 + 43\times 78)10^2 + 78\times 21$$`
+
 #### Multiplicación de matrices cuadradas: Método de Strassen
 La definición del algoritmo de multiplicación de matrices es `$C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}$`. Si el tamaño de las matrices es $2n\times 2n$, podemos reducir el caso a 7 multiplicaciones de matrices de tamaño $n$ y algunas sumas y restas. La recurrencia resultante es $T(n)=7T(\frac{n}{2})+bn^2 \in \mathcal{O}(n^{log(7)}$.
 
