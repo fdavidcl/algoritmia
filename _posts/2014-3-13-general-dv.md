@@ -47,4 +47,7 @@ La definición del algoritmo de multiplicación de matrices es `$C_{ij}=\sum_{k=
 
 #### [Multiplicación de polinomios](http://www.cse.ust.hk/~dekai/271/notes/L03/L03.pdf)
 
-#### El problema del skyline
+#### [El problema del skyline](http://stackoverflow.com/questions/1066234/the-skyline-problem)
+Al mostrar gráficos 3D por pantalla es necesario calcular la parte de los objetos que es visible al usuario y renderizar únicamente estos. Un caso particular es el que le da nombre al problema, el de dibujar un *skyline* a partir de una lista de edificios.
+
+Se tendrá un caso base y se dividirá la lista de edificios en listas de tamaños que sean potencias de dos, de forma que se puedan crear trozos del skyline y más tarde se combinen, tomando en cada punto el mayor valor de la altura (ya que solo hay que mostrar la silueta del skyline).
