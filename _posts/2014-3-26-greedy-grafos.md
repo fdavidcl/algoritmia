@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Greedy sobre grafos
+title: Algoritmos Greedy sobre grafos
 ---
 
 Veremos dos algoritmos para la búsqueda del árbol generador minimal. Suponemos un grafo conexo `$G=(V, A)$` sobre el que hay definida una matriz de pesos `$L_{ij} \ge 0$`.
@@ -15,6 +15,14 @@ Veremos dos algoritmos para la búsqueda del árbol generador minimal. Suponemos
 1. Repetir en bucle hasta tener $|V|-1$ aristas correctas.
 
 El algoritmo es `$\mathcal{O}(a\times log(a))$` con $a$ el número de aristas.
+
+**Ejemplo**
+
+        a
+     /1/1\1\
+    b-2-c-2-d
+     \3\3/3/
+        e-1-f
 
 #### Aplicaciones
 * Diseño de redes físicas
