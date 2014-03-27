@@ -24,8 +24,8 @@ Mediante el algoritmo de Kruskal construimos el árbol generador minimal sin ate
 
 1. Tomamos un nodo raíz arbitrario.
 1. Mientras el conjunto de nodos utilizados sea distinto del total:
-1.1. Encontrar la arista de mínima longitud tal que conectemos un nodo utilizado con otro no utilizado.
-1.1. Añadir la arista al conjunto de aristas de la solución.
+  1. Encontrar la arista de mínima longitud tal que conectemos un nodo utilizado con otro no utilizado.
+  1. Añadir la arista al conjunto de aristas de la solución.
 
 #### Aplicaciones
 * Diseño de redes físicas
