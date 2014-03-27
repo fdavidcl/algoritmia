@@ -8,6 +8,7 @@ Veremos dos algoritmos para la búsqueda del árbol generador minimal. Suponemos
 ### Algoritmo de Kruskal
 
 **Algoritmo**:
+
 1. Ordenar las aristas de forma creciente en costo
 1. Tomar la arista más corta
 1. Borrar la arista de $E$
@@ -20,6 +21,7 @@ El algoritmo es `$\mathcal{O}(a\times log(a))$` con $a$ el número de aristas.
 Mediante el algoritmo de Kruskal construimos el árbol generador minimal sin atender a la conexión entre nodos, de forma algo caótica. Sin embargo, Prim permite construir el árbol generador minimal de forma natural, comenzando por una raíz arbitraria y a cada paso añadiendo una rama al árbol.
 
 **Algoritmo**:
+
 1. Tomamos un nodo raíz arbitrario.
 1. Mientras el conjunto de nodos utilizados sea distinto del total:
 1.1. Encontrar la arista de mínima longitud tal que conectemos un nodo utilizado con otro no utilizado.
