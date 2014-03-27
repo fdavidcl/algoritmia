@@ -13,7 +13,7 @@ Veremos dos algoritmos para la búsqueda del árbol generador minimal. Suponemos
 1. Tomar la arista más corta
 1. Borrar la arista de $E$
 1. Aceptar la arista si no forma un ciclo en el árbol parcial, rechazarla en otro caso
-1. Repetir en bucle hasta tener $|V|-1$ aristas correctas.
+1. Repetir en bucle hasta tener `$|V|-1$` aristas correctas.
 
 El algoritmo es `$\mathcal{O}(a\times log(a))$` con $a$ el número de aristas.
 
@@ -24,8 +24,8 @@ Mediante el algoritmo de Kruskal construimos el árbol generador minimal sin ate
 
 * Tomamos un nodo raíz arbitrario.
 * Mientras el conjunto de nodos utilizados sea distinto del total:
-* * Encontrar la arista de mínima longitud tal que conectemos un nodo utilizado con otro no utilizado.
-* * Añadir la arista al conjunto de aristas de la solución.
+ * Encontrar la arista de mínima longitud tal que conectemos un nodo utilizado con otro no utilizado.
+ * Añadir la arista al conjunto de aristas de la solución.
 
 #### Aplicaciones
 * Diseño de redes físicas
