@@ -15,3 +15,6 @@ Si `$m_i$` es el tamaño de `$S_i$`, hay `$m=m_1m_2\dots m_n$` n-tuplas posibles
 Mediante el backtracking y el branch&bound, evitamos evaluar gran parte de estas candidatas.
 Para ello, deducimos en cada solución parcial si es posible llegar a una solución mediante funciones de
 acotación.
+
+### Ejemplos
+El coloreo de un grafo puede resolverse mediante un algoritmo de backtracking. También puzles como el solitario o el puzle de quince fichas.
